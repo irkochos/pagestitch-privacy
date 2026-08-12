@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PageStitch Privacy Policy</title>
+    <style>
+      :root { color-scheme: light; font-family: system-ui, sans-serif; color: #14213d; background: #f7f8fa; }
+      body { margin: 0; }
+      main { width: min(720px, calc(100% - 40px)); margin: 64px auto; }
+      h1, h2 { line-height: 1.15; }
+      h1 { font-size: clamp(2rem, 6vw, 3.75rem); letter-spacing: -0.04em; }
+      h2 { margin-top: 2.25rem; }
+      p, li { color: #3f4960; line-height: 1.7; }
+      .meta { color: #566079; font-size: 0.9rem; }
+      a { color: #b52e35; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="meta">Effective August 11, 2026</p>
+      <h1>PageStitch privacy policy</h1>
+
+      <p>PageStitch captures a web page selected by the user and converts it into a PNG image. All capture processing happens locally in Google Chrome on the user's device.</p>
+
+      <h2>Data PageStitch handles</h2>
+      <p>When the user starts a capture, PageStitch temporarily handles the selected page's visual content, layout measurements, and URL. The URL is used only to confirm that the page is supported and remains the active source during capture.</p>
+
+      <h2>Collection and sharing</h2>
+      <p>PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no analytics, advertising, tracking, account system, or remote service. PageStitch does not sell or share user data.</p>
+
+      <h2>Limited use</h2>
+      <p>PageStitch uses page content, screenshots, layout measurements, and the selected page URL only to provide its disclosed single purpose: creating the user-requested PNG capture. This use complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+      <h2>Local storage and deletion</h2>
+      <p>The completed PNG is temporarily stored in extension-owned IndexedDB so the local result page can display it. It is normally deleted as soon as the result page reads it. If a result cannot be opened, the capture is deleted immediately. Records left by a browser or extension crash are deleted after 24 hours when PageStitch next starts or saves a capture.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>activeTab:</strong> temporarily accesses only the page on which the user starts a capture.</li>
+        <li><strong>scripting:</strong> runs the packaged helper that measures, scrolls, captures, and restores the selected page.</li>
+        <li><strong>offscreen:</strong> stitches viewport images locally using a hidden canvas.</li>
+      </ul>
+
+      <p>PageStitch does not request the <code>clipboardWrite</code> permission. The local result page calls the browser Clipboard API only after the user selects <strong>Copy image</strong>; Chrome or operating-system policy can still refuse the request.</p>
+
+      <h2>User choices</h2>
+      <p>PageStitch runs only after the user clicks its toolbar button. Users can choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
+
+      <h2>Remote code</h2>
+      <p>PageStitch packages all executable code in the extension and does not download or execute remote code. In the Chrome Web Store Privacy practices dashboard, the publisher must declare: <strong>Remote code: No, I am not using remote code.</strong></p>
+
+      <h2>Changes</h2>
+      <p>If PageStitch's data practices change, this policy and the Chrome Web Store privacy disclosures will be updated before the changed version is published.</p>
+
+      <h2>Contact</h2>
+      <p>Privacy and support questions can be sent through the contact and support channels displayed on PageStitch's Chrome Web Store listing.</p>
+    </main>
+  </body>
+</html>
