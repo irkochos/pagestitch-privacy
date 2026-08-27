@@ -3,7 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PageStitch privacy policy.">
+    <meta name="description" content="How PageStitch handles page content, screenshots, URLs, local storage, permissions, and deletion.">
+    <meta name="theme-color" content="#f4f5f2">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PageStitch Privacy Policy">
+    <meta property="og:description" content="PageStitch processes captures locally, without uploads, analytics, advertising, or tracking.">
+    <meta property="og:url" content="https://getpagestitch.com/privacy-policy.html">
+    <meta property="og:image" content="https://getpagestitch.com/promo-marquee.png">
+    <link rel="canonical" href="https://getpagestitch.com/privacy-policy.html">
+    <link rel="icon" href="promo-small.png" type="image/png">
     <title>Privacy Policy — PageStitch</title>
     <link rel="stylesheet" href="site.css">
   </head>
@@ -11,65 +19,93 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="nav-shell">
-        <a class="wordmark" href="./" aria-label="PageStitch home">Page<span class="wordmark-mark">Stitch</span></a>
+        <a class="wordmark" href="./" aria-label="PageStitch home">
+          <span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Page<span class="wordmark-mark">Stitch</span></span>
+        </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="./">Home</a>
+          <a href="./#workflow">How it works</a>
           <a href="support.html">Support</a>
           <a href="privacy-policy.html" aria-current="page">Privacy</a>
         </nav>
+        <a class="nav-cta" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe">Add to Chrome</a>
       </div>
     </header>
+
     <main id="main">
-      <header class="page-intro">
-        <div class="shell">
-          <p class="eyebrow">PageStitch</p>
-          <h1>Privacy policy</h1>
-          <p class="lede">What PageStitch handles, why it handles it, and where it stays.</p>
+      <header class="page-intro policy-intro">
+        <div class="shell page-intro-grid">
+          <div>
+            <p class="eyebrow">Plain-language privacy</p>
+            <h1>Your capture<br>stays yours.</h1>
+          </div>
+          <div>
+            <p class="lede">What PageStitch handles, why it handles it, and where it stays.</p>
+            <p class="policy-date">Effective August 11, 2026</p>
+          </div>
         </div>
       </header>
-      <article class="policy-layout">
-        <p class="meta">Effective August 11, 2026</p>
-        <p>PageStitch captures a web page selected by the user and converts it into a PNG image. All capture processing happens locally in Google Chrome on the user's device.</p>
 
-        <h2>Data PageStitch handles</h2>
-        <p>When the user starts a capture, PageStitch temporarily handles the selected page's visual content, layout measurements, and URL. The URL is used only to confirm that the page is supported and remains the active source during capture.</p>
+      <div class="shell policy-shell">
+        <aside class="policy-summary" aria-label="Privacy summary">
+          <p class="index-label">At a glance</p>
+          <strong>Local processing</strong>
+          <span>No uploads</span>
+          <span>No analytics</span>
+          <span>No advertising</span>
+          <span>No tracking</span>
+          <span>No remote code</span>
+        </aside>
 
-        <h2>Collection and sharing</h2>
-        <p>PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no analytics, advertising, tracking, account system, or remote service. PageStitch does not sell or share user data.</p>
+        <article class="policy-layout">
+          <p class="policy-lead">PageStitch captures a web page selected by the user and converts it into a PNG image. All capture processing happens locally in Google Chrome on the user's device.</p>
 
-        <h2>Limited use</h2>
-        <p>PageStitch uses page content, screenshots, layout measurements, and the selected page URL only to provide its disclosed single purpose: creating the user-requested PNG capture. This use complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+          <h2>Data PageStitch handles</h2>
+          <p>When the user starts a capture, PageStitch temporarily handles the selected page's visual content, layout measurements, and URL. The URL is used only to confirm that the page is supported and remains the active source during capture.</p>
 
-        <h2>Local storage and deletion</h2>
-        <p>The completed PNG is temporarily stored in extension-owned IndexedDB so the local result page can display it. It is normally deleted as soon as the result page reads it. If a result cannot be opened, the capture is deleted immediately. Records left by a browser or extension crash are deleted after 24 hours when PageStitch next starts or saves a capture.</p>
+          <h2>Collection and sharing</h2>
+          <p>PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no analytics, advertising, tracking, account system, or remote service. PageStitch does not sell or share user data.</p>
 
-        <h2>Permissions</h2>
-        <ul>
-          <li><strong>activeTab:</strong> temporarily accesses only the page on which the user starts a capture.</li>
-          <li><strong>scripting:</strong> runs the packaged helper that measures, scrolls, captures, and restores the selected page.</li>
-          <li><strong>offscreen:</strong> stitches viewport images locally using a hidden canvas.</li>
-        </ul>
+          <h2>Limited use</h2>
+          <p>PageStitch uses page content, screenshots, layout measurements, and the selected page URL only to provide its disclosed single purpose: creating the user-requested PNG capture. This use complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
 
-        <p>PageStitch does not request the <code>clipboardWrite</code> permission. The local result page calls the browser Clipboard API only after the user selects <strong>Copy image</strong>; Chrome or operating-system policy can still refuse the request.</p>
+          <h2>Local storage and deletion</h2>
+          <p>The completed PNG is temporarily stored in extension-owned IndexedDB so the local result page can display it. It is normally deleted as soon as the result page reads it. If a result cannot be opened, the capture is deleted immediately. Records left by a browser or extension crash are deleted after 24 hours when PageStitch next starts or saves a capture.</p>
 
-        <h2>User choices</h2>
-        <p>PageStitch runs only after the user clicks its toolbar button. Users can choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
+          <h2>Permissions</h2>
+          <ul>
+            <li><strong>activeTab:</strong> temporarily accesses only the page on which the user starts a capture.</li>
+            <li><strong>scripting:</strong> runs the packaged helper that measures, scrolls, captures, and restores the selected page.</li>
+            <li><strong>offscreen:</strong> stitches viewport images locally using a hidden canvas.</li>
+          </ul>
+          <p>PageStitch does not request the <code>clipboardWrite</code> permission. The local result page calls the browser Clipboard API only after the user selects <strong>Copy image</strong>; Chrome or operating-system policy can still refuse the request.</p>
 
-        <h2>Remote code</h2>
-        <p>PageStitch packages all executable code in the extension and does not download or execute remote code. In the Chrome Web Store Privacy practices dashboard, the publisher must declare: <strong>Remote code: No, I am not using remote code.</strong></p>
+          <h2>User choices</h2>
+          <p>PageStitch runs only after the user clicks its toolbar button. Users can choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
 
-        <h2>Changes</h2>
-        <p>If PageStitch's data practices change, this policy and the Chrome Web Store privacy disclosures will be updated before the changed version is published.</p>
+          <h2>Remote code</h2>
+          <p>PageStitch packages all executable code in the extension and does not download or execute remote code.</p>
 
-        <h2>Contact</h2>
-        <p>Privacy and support questions can be sent through the contact and support channels displayed on PageStitch's Chrome Web Store listing. You can also use the <a href="support.html">PageStitch support page</a>.</p>
-      </article>
-    </main>
-    <footer class="site-footer">
-      <div class="shell footer-shell">
-        <span>PageStitch · v0.1.1</span>
-        <div class="footer-links"><a href="./">Home</a><a href="support.html">Support</a></div>
+          <h2>Changes</h2>
+          <p>If PageStitch's data practices change, this policy and the Chrome Web Store privacy disclosures will be updated before the changed version is published.</p>
+
+          <h2>Contact</h2>
+          <p>For privacy or support questions, use the <a href="support.html">PageStitch support page</a> or email <a href="mailto:abdessamad.okri@gmail.com">abdessamad.okri@gmail.com</a>.</p>
+        </article>
       </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <a class="wordmark footer-wordmark" href="./">Page<span class="wordmark-mark">Stitch</span></a>
+          <p>Full-page screenshots.<br>Made locally in Chrome.</p>
+        </div>
+        <div class="footer-column"><strong>Product</strong><a href="./">Homepage</a><a href="support.html">Support</a></div>
+        <div class="footer-column"><strong>Trust</strong><a href="https://github.com/irkochos/pagestitch-privacy">Website on GitHub</a><a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe">Chrome Web Store</a></div>
+      </div>
+      <div class="shell footer-base"><span>© 2026 PageStitch</span><span>Chrome 116+ · PNG output</span></div>
     </footer>
   </body>
 </html>
