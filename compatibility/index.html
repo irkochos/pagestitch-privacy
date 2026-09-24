@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PageStitch compatibility fixture</title>
+    <link rel="stylesheet" href="fixture.css">
+    <link rel="modulepreload" href="cases.js">
+  </head>
+  <body>
+    <header class="fixture-controls">
+      <label for="case-selector">Compatibility case</label>
+      <select id="case-selector"></select>
+      <output id="case-identity" aria-live="polite"></output>
+      <output id="fixture-readiness" data-ready="false" aria-live="polite">Resetting</output>
+    </header>
+    <main id="fixture-stage" tabindex="-1"></main>
+    <script type="module" src="fixture.js"></script>
+  </body>
+</html>
