@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Take a scrolling screenshot in Chrome with PageStitch: it scrolls the page or a large inner panel, stitches one PNG, and puts the page back afterwards.">
+    <meta name="theme-color" content="#f4f5f2">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Scrolling screenshots in Chrome">
+    <meta property="og:description" content="How PageStitch scrolls a page or a large inner panel, stitches the views into PNG, and restores the page when it is done.">
+    <meta property="og:url" content="https://getpagestitch.com/scrolling-screenshot-chrome/">
+    <meta property="og:image" content="https://getpagestitch.com/promo-marquee.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://getpagestitch.com/scrolling-screenshot-chrome/">
+    <link rel="icon" href="../promo-small.png" type="image/png">
+    <title>Scrolling Screenshot in Chrome — PageStitch</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="wordmark" href="../" aria-label="PageStitch home">
+          <span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Page<span class="wordmark-mark">Stitch</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+          <a href="../privacy-policy.html">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=scrolling-screenshot-chrome">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-intro guide-intro">
+        <div class="shell page-intro-grid">
+          <div>
+            <p class="eyebrow">Guide · Scrolling capture</p>
+            <h1>Scrolling screenshots in Chrome</h1>
+          </div>
+          <div>
+            <p class="lede">A scrolling screenshot captures more than fits in the window by scrolling through the page and joining the views together. PageStitch does the scrolling for you and hands back the whole page as a PNG, processed locally in Chrome.</p>
+            <div class="actions">
+              <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=scrolling-screenshot-chrome">Add PageStitch to Chrome <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell guide-layout">
+        <article class="article">
+          <section aria-labelledby="meaning-heading">
+            <p class="eyebrow">The idea</p>
+            <h2 id="meaning-heading">What a scrolling screenshot is</h2>
+            <p>An ordinary screenshot records what fits in the window. A scrolling screenshot keeps going: it moves down the page, captures each screen, and joins the pieces into one tall image, so you get content you would otherwise have to scroll to see.</p>
+            <p>Chrome's developer tools include a full-size screenshot command, but it renders the page at its full height instead of scrolling it. The <a href="../how-to-screenshot-an-entire-webpage/">guide to screenshotting an entire webpage</a> covers that method. An extension like PageStitch does the scrolling for you, the way you would by hand.</p>
+          </section>
+
+          <section aria-labelledby="scroll-heading">
+            <p class="eyebrow">Step by step</p>
+            <h2 id="scroll-heading">How PageStitch scrolls and stitches</h2>
+            <ol class="guide-steps">
+              <li><span>01</span><p><strong>You start it.</strong> Open an ordinary web page and click the PageStitch toolbar button, or press <strong>Alt+Shift+S</strong> (Option+Shift+S on macOS). The shortcut can be changed at <code>chrome://extensions/shortcuts</code>.</p></li>
+              <li><span>02</span><p><strong>It measures the page.</strong> A packaged helper works out how tall and how wide the page is, including pages wider than the browser window.</p></li>
+              <li><span>03</span><p><strong>It scrolls one screen at a time.</strong> The helper controls scrolling during capture, and Chrome captures each view. The toolbar badge shows progress. Keep the tab active until it finishes.</p></li>
+              <li><span>04</span><p><strong>It stitches locally.</strong> The views are joined on a canvas in a hidden extension page, on your device.</p></li>
+              <li><span>05</span><p><strong>You check the result.</strong> The capture opens in a local result tab, where you can <strong>Download PNG</strong>, <strong>Copy image</strong>, or crop a single-image capture first.</p></li>
+            </ol>
+            <figure class="guide-figure">
+              <img src="../screenshot-1.png" width="1280" height="800" alt="The PageStitch result tab showing a stitched capture of a long page, with Download PNG and Copy image buttons">
+              <figcaption>The stitched result opens in a local tab.</figcaption>
+            </figure>
+          </section>
+
+          <section aria-labelledby="nested-heading">
+            <p class="eyebrow">Web apps</p>
+            <h2 id="nested-heading">Pages that scroll inside a panel</h2>
+            <p>Many web apps, such as mail clients, chat tools, dashboards, and documentation sites, keep the page itself still and scroll a panel inside it. A capture of the page alone would stop at the edge of that panel.</p>
+            <p>PageStitch looks for this case. When the page itself fits in the window and a single scrollable area takes up at least half of it, PageStitch scrolls that area instead and captures its full content. The result tab tells you it did so with the note “Captured scrollable content”.</p>
+            <p>Layouts with several competing scrollers, small scrolling boxes, or custom scrolling code are harder. Pages with nested or custom scrolling areas can produce incomplete or imperfect captures, so check the preview before you rely on it.</p>
+          </section>
+
+          <section aria-labelledby="restore-heading">
+            <p class="eyebrow">Afterwards</p>
+            <h2 id="restore-heading">Your page is put back the way it was</h2>
+            <p>To capture a page, PageStitch has to scroll it. When the capture ends, the helper restores the original page state, including your scroll position, so you can carry on reading where you were.</p>
+            <p>The same happens if a capture cannot finish. Chrome only captures the visible, active tab, so if you switch tabs mid-capture, PageStitch stops safely instead of stitching the wrong pixels, and puts the page back as it was.</p>
+          </section>
+
+          <section aria-labelledby="parts-heading">
+            <p class="eyebrow">Very long pages</p>
+            <h2 id="parts-heading">When one image isn't enough: numbered PNG parts</h2>
+            <p>Some pages are longer or wider than a single image in Chrome can hold. Rather than scaling the page down and losing detail, PageStitch splits the result into lossless, numbered PNG parts.</p>
+            <ul class="guide-list">
+              <li>Step through the parts in the result tab with <strong>Previous part</strong> and <strong>Next part</strong>.</li>
+              <li>Download the parts you need. Each file gets a readable name built from the site, the page title, and the local date and time.</li>
+              <li>Cropping is only available for single-image captures.</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="limits-heading">
+            <p class="eyebrow">Clear boundaries</p>
+            <h2 id="limits-heading">Where scrolling capture has limits</h2>
+            <div class="answer-list">
+              <p><strong>Protected pages</strong><span>Chrome system pages, the Chrome Web Store, other extension pages, and non-HTTP(S) URLs cannot be captured.</span></p>
+              <p><strong>Changing layouts</strong><span>Pages that animate, load forever, or change as they scroll may not stitch perfectly.</span></p>
+              <p><strong>Very large pages</strong><span>Browser canvas limits apply to unusually tall or wide results.</span></p>
+            </div>
+          </section>
+
+          <section aria-labelledby="faq-heading">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-heading">Scrolling screenshot questions</h2>
+            <div class="guide-faq">
+              <h3>Do I have to scroll the page myself?</h3>
+              <p>No. Start the capture and PageStitch scrolls for you. Just keep the tab active until the badge shows it has finished.</p>
+              <h3>Is a scrolling screenshot the same as a full-page screenshot?</h3>
+              <p>They describe the same result: an image of the whole page, not just the window. The <a href="../full-page-screenshot-chrome/">full-page screenshot guide</a> covers the rest of the PageStitch workflow.</p>
+              <h3>Are my captures uploaded anywhere?</h3>
+              <p>No. Scrolling, capturing, and stitching all happen locally in Chrome. See <a href="../private-screenshot-extension/">how PageStitch keeps captures private</a> and the <a href="../privacy-policy.html">privacy policy</a>.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="related-heading">
+            <p class="eyebrow">Keep reading</p>
+            <h2 id="related-heading">Related guides</h2>
+            <ul class="related-links">
+              <li><a href="../full-page-screenshot-chrome/">Full-page screenshots in Chrome with PageStitch</a></li>
+              <li><a href="../how-to-screenshot-an-entire-webpage/">How to screenshot an entire webpage: three methods compared</a></li>
+              <li><a href="../private-screenshot-extension/">A private screenshot extension for Chrome</a></li>
+              <li><a href="../support.html">PageStitch support: capture guide and troubleshooting</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+
+      <section class="final-cta" aria-labelledby="cta-heading">
+        <div class="shell final-cta-grid">
+          <div>
+            <p class="eyebrow">Let it do the scrolling</p>
+            <h2 id="cta-heading">One shortcut, whole page.</h2>
+          </div>
+          <div class="final-cta-action">
+            <p>Install PageStitch, open a long page, and press Alt+Shift+S.</p>
+            <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=scrolling-screenshot-chrome">Add to Chrome <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <a class="wordmark footer-wordmark" href="../">Page<span class="wordmark-mark">Stitch</span></a>
+          <p>Full-page screenshots.<br>Made locally in Chrome.</p>
+        </div>
+        <div class="footer-column">
+          <strong>Product</strong>
+          <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=scrolling-screenshot-chrome">Chrome Web Store</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+        </div>
+        <div class="footer-column">
+          <strong>Trust</strong>
+          <a href="../privacy-policy.html">Privacy policy</a>
+          <a href="https://github.com/irkochos/pagestitch-privacy">Website on GitHub</a>
+        </div>
+        <div class="footer-column">
+          <strong>Guides</strong>
+          <a href="../full-page-screenshot-chrome/">Full-page screenshots</a>
+          <a href="../how-to-screenshot-an-entire-webpage/">Screenshot a whole webpage</a>
+          <a href="../private-screenshot-extension/">Private screenshots</a>
+          <a href="../scrolling-screenshot-chrome/">Scrolling screenshots</a>
+          <a href="../gofullpage-alternative/">GoFullPage alternative</a>
+        </div>
+      </div>
+      <div class="shell footer-base">
+        <span>© 2026 PageStitch</span>
+        <span>Chrome 116+ · PNG output</span>
+      </div>
+    </footer>
+  </body>
+</html>
