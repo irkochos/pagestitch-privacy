@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Considering an alternative to GoFullPage? Here is what PageStitch does and does not do: local full-page PNG capture in Chrome, with no account or uploads.">
+    <meta name="theme-color" content="#f4f5f2">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GoFullPage alternative for Chrome">
+    <meta property="og:description" content="What PageStitch does, the permissions it asks for, how it handles your data, and what it does not do, so you can decide for yourself.">
+    <meta property="og:url" content="https://getpagestitch.com/gofullpage-alternative/">
+    <meta property="og:image" content="https://getpagestitch.com/promo-marquee.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://getpagestitch.com/gofullpage-alternative/">
+    <link rel="icon" href="../promo-small.png" type="image/png">
+    <title>GoFullPage alternative for Chrome — PageStitch</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="wordmark" href="../" aria-label="PageStitch home">
+          <span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Page<span class="wordmark-mark">Stitch</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+          <a href="../privacy-policy.html">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=gofullpage-alternative">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-intro guide-intro">
+        <div class="shell page-intro-grid">
+          <div>
+            <p class="eyebrow">Alternative · Chrome</p>
+            <h1>Looking for a GoFullPage alternative? Meet PageStitch.</h1>
+          </div>
+          <div>
+            <p class="lede">If you are looking at alternatives to GoFullPage, this page describes PageStitch on its own terms: what it does, what it asks for, and what it leaves out, so you can decide what fits.</p>
+            <p class="lede">PageStitch is not affiliated with GoFullPage.</p>
+            <div class="actions">
+              <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=gofullpage-alternative">Add PageStitch to Chrome <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell guide-layout">
+        <article class="article">
+          <section aria-labelledby="what-heading">
+            <p class="eyebrow">What PageStitch is</p>
+            <h2 id="what-heading">One job: the whole page, as a PNG</h2>
+            <p>PageStitch is a Chrome extension that captures the full content of a web page you select and exports it as a PNG. You start a capture, it scrolls and stitches the page on your device, and you get the result in a local preview tab.</p>
+            <ul class="guide-list">
+              <li><strong>Full-page capture.</strong> Full-height pages and pages wider than the browser window.</li>
+              <li><strong>Scrolling panels.</strong> When the page fits in the window and a single scrollable area takes up at least half of it, PageStitch captures that area's full content.</li>
+              <li><strong>Very large pages.</strong> Results too big for one image are split into lossless, numbered PNG parts instead of being scaled down.</li>
+              <li><strong>Preview, download, copy.</strong> Check the capture first, then choose <strong>Download PNG</strong> or <strong>Copy image</strong>.</li>
+              <li><strong>Keyboard shortcut.</strong> <strong>Alt+Shift+S</strong> (Option+Shift+S on macOS), changeable at <code>chrome://extensions/shortcuts</code>.</li>
+              <li><strong>Readable filenames.</strong> Downloads are named from the site, the page title, and the local date and time.</li>
+              <li><strong>Crop.</strong> Trim a single-image capture losslessly before saving, with <strong>Undo crop</strong>.</li>
+              <li><strong>Seven languages.</strong> English, Spanish, French, Brazilian Portuguese, German, Arabic, and Japanese.</li>
+            </ul>
+            <p>The <a href="../full-page-screenshot-chrome/">full-page screenshot guide</a> walks through a capture, and the <a href="../scrolling-screenshot-chrome/">scrolling screenshot guide</a> explains how PageStitch scrolls and restores the page.</p>
+          </section>
+
+          <section aria-labelledby="privacy-heading">
+            <p class="eyebrow">Privacy</p>
+            <h2 id="privacy-heading">How PageStitch handles your data</h2>
+            <p>All capture processing happens locally in Chrome on your device. PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no account system, analytics, advertising, tracking, cloud storage, or remote code.</p>
+            <p>The completed PNG is temporarily stored in extension-owned storage so the local result page can display it. A single-image capture is deleted as soon as the result page has rendered it; a capture split into several PNG parts is kept while its result tab is open and deleted when you select <strong>Close</strong> or <strong>Capture another</strong>. Leftover records are deleted once they are 24 hours old, when PageStitch next starts or saves a capture. The site name and page title are kept with the local capture only to name the downloaded file; the rest of the URL is not stored. The <a href="../private-screenshot-extension/">private screenshot guide</a> and the <a href="../privacy-policy.html">privacy policy</a> have the details.</p>
+          </section>
+
+          <section aria-labelledby="permissions-heading">
+            <p class="eyebrow">Permissions</p>
+            <h2 id="permissions-heading">What PageStitch asks Chrome for</h2>
+            <div class="answer-list">
+              <p><strong><code>activeTab</code></strong><span>Temporary access to the tab only after you click the PageStitch toolbar button or press its keyboard shortcut, used to validate, measure, scroll, and capture the selected page.</span></p>
+              <p><strong><code>scripting</code></strong><span>Injects the packaged capture helper into the selected tab. The helper measures the page, controls scrolling during capture, and restores the original page state afterward.</span></p>
+              <p><strong><code>offscreen</code></strong><span>Creates a hidden extension document containing a local canvas that stitches captured viewport images into a PNG (or numbered PNG parts for very large pages).</span></p>
+            </div>
+            <p>PageStitch does not request the <code>clipboardWrite</code> permission. <strong>Copy image</strong> uses Chrome's Clipboard API only after you select it.</p>
+          </section>
+
+          <section aria-labelledby="not-heading">
+            <p class="eyebrow">Know before you install</p>
+            <h2 id="not-heading">What PageStitch does not do</h2>
+            <p>PageStitch is deliberately narrow. If you need any of the following, it is not the right tool:</p>
+            <div class="answer-list">
+              <p><strong>PNG only</strong><span>There is no PDF or JPG export. Every capture is saved as PNG. For a PDF, Chrome's print dialog can save one; the <a href="../how-to-screenshot-an-entire-webpage/">how-to guide</a> explains when that makes sense.</span></p>
+              <p><strong>No annotation</strong><span>There are no drawing, highlighting, text, or blur tools. Cropping a single-image capture is the only edit.</span></p>
+              <p><strong>No cloud or sharing links</strong><span>There is no account, no cloud storage, and no hosted link to share. Download the PNG or copy it, and share it however you like.</span></p>
+              <p><strong>Protected pages</strong><span>Chrome system pages, the Chrome Web Store, other extension pages, and non-HTTP(S) URLs cannot be captured.</span></p>
+              <p><strong>Changing layouts</strong><span>Pages that animate, load forever, change as they scroll, or use nested or custom scrolling areas may not stitch perfectly.</span></p>
+            </div>
+          </section>
+
+          <section aria-labelledby="compare-heading">
+            <p class="eyebrow">Choosing</p>
+            <h2 id="compare-heading">Compare before you choose</h2>
+            <p>Extensions change over time, so the most reliable comparison is the one you make yourself. Compare the current Chrome Web Store listings of both extensions before choosing: look at the features, the permissions each one requests, and the privacy practices each one discloses.</p>
+            <p>The <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=gofullpage-alternative">PageStitch listing on the Chrome Web Store</a> shows its current version, permissions, and privacy disclosures.</p>
+          </section>
+
+          <section aria-labelledby="faq-heading">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-heading">Questions about switching</h2>
+            <div class="guide-faq">
+              <h3>Is PageStitch made by the same developer as GoFullPage?</h3>
+              <p>No. PageStitch is not affiliated with GoFullPage. It is an independent extension.</p>
+              <h3>Can I keep another screenshot extension installed as well?</h3>
+              <p>Yes. Chrome lets you install more than one. If two extensions use the same keyboard shortcut, change one of them at <code>chrome://extensions/shortcuts</code>.</p>
+              <h3>What does PageStitch need to get started?</h3>
+              <p>Chrome 116 or newer. There is no account to create. Open an ordinary web page and click the toolbar button or press Alt+Shift+S.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="related-heading">
+            <p class="eyebrow">Keep reading</p>
+            <h2 id="related-heading">Related guides</h2>
+            <ul class="related-links">
+              <li><a href="../private-screenshot-extension/">A private screenshot extension for Chrome</a></li>
+              <li><a href="../full-page-screenshot-chrome/">Full-page screenshots in Chrome with PageStitch</a></li>
+              <li><a href="../scrolling-screenshot-chrome/">Scrolling screenshots in Chrome: how PageStitch scrolls and stitches</a></li>
+              <li><a href="../support.html">PageStitch support: capture guide and troubleshooting</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+
+      <section class="final-cta" aria-labelledby="cta-heading">
+        <div class="shell final-cta-grid">
+          <div>
+            <p class="eyebrow">Decide for yourself</p>
+            <h2 id="cta-heading">Try the PNG workflow.</h2>
+          </div>
+          <div class="final-cta-action">
+            <p>Install PageStitch, open a page, and press Alt+Shift+S. You can remove it from Chrome at any time.</p>
+            <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=gofullpage-alternative">Add to Chrome <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <a class="wordmark footer-wordmark" href="../">Page<span class="wordmark-mark">Stitch</span></a>
+          <p>Full-page screenshots.<br>Made locally in Chrome.</p>
+        </div>
+        <div class="footer-column">
+          <strong>Product</strong>
+          <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=gofullpage-alternative">Chrome Web Store</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+        </div>
+        <div class="footer-column">
+          <strong>Trust</strong>
+          <a href="../privacy-policy.html">Privacy policy</a>
+          <a href="https://github.com/irkochos/pagestitch-privacy">Website on GitHub</a>
+        </div>
+        <div class="footer-column">
+          <strong>Guides</strong>
+          <a href="../full-page-screenshot-chrome/">Full-page screenshots</a>
+          <a href="../how-to-screenshot-an-entire-webpage/">Screenshot a whole webpage</a>
+          <a href="../private-screenshot-extension/">Private screenshots</a>
+          <a href="../scrolling-screenshot-chrome/">Scrolling screenshots</a>
+          <a href="../gofullpage-alternative/">GoFullPage alternative</a>
+        </div>
+      </div>
+      <div class="shell footer-base">
+        <span>© 2026 PageStitch</span>
+        <span>Chrome 116+ · PNG output</span>
+      </div>
+    </footer>
+  </body>
+</html>

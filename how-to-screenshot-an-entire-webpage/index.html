@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Three ways to screenshot an entire webpage in Chrome: the built-in DevTools command, the PageStitch extension, and Print to PDF, with tips for tricky pages.">
+    <meta name="theme-color" content="#f4f5f2">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to screenshot an entire webpage in Chrome">
+    <meta property="og:description" content="Chrome DevTools, PageStitch, or Print to PDF: three honest ways to capture a whole page, and when to use each.">
+    <meta property="og:url" content="https://getpagestitch.com/how-to-screenshot-an-entire-webpage/">
+    <meta property="og:image" content="https://getpagestitch.com/promo-marquee.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://getpagestitch.com/how-to-screenshot-an-entire-webpage/">
+    <link rel="icon" href="../promo-small.png" type="image/png">
+    <title>How to Screenshot an Entire Webpage in Chrome — PageStitch</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="wordmark" href="../" aria-label="PageStitch home">
+          <span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Page<span class="wordmark-mark">Stitch</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+          <a href="../privacy-policy.html">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=how-to-screenshot-an-entire-webpage">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-intro guide-intro">
+        <div class="shell page-intro-grid">
+          <div>
+            <p class="eyebrow">How-to · Chrome</p>
+            <h1>How to screenshot an entire webpage</h1>
+          </div>
+          <div>
+            <p class="lede">There is more than one way to capture a whole page in Chrome, and one of them is already built into your browser. Here are three methods, how to use each, and when each one makes sense.</p>
+            <div class="actions">
+              <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=how-to-screenshot-an-entire-webpage">Add PageStitch to Chrome <span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="#devtools">Jump to the methods</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell guide-layout">
+        <article class="article">
+          <section id="devtools" aria-labelledby="devtools-heading">
+            <p class="eyebrow">Method 1 · Built into Chrome</p>
+            <h2 id="devtools-heading">Chrome DevTools: “Capture full size screenshot”</h2>
+            <p>Chrome's developer tools include a full-page screenshot command. It is built in and free, and you don't need to install anything. It is aimed at developers, so it is a little hidden, but it only takes a few keystrokes:</p>
+            <ol class="guide-steps">
+              <li><span>01</span><p>Open the page you want to capture.</p></li>
+              <li><span>02</span><p>Open DevTools with <strong>F12</strong>, or <strong>Ctrl+Shift+I</strong> on Windows, Linux, and ChromeOS (<strong>Cmd+Option+I</strong> on macOS).</p></li>
+              <li><span>03</span><p>Open the Command Menu with <strong>Ctrl+Shift+P</strong> (<strong>Cmd+Shift+P</strong> on macOS).</p></li>
+              <li><span>04</span><p>Type <code>screenshot</code> and choose <strong>Capture full size screenshot</strong>. Chrome downloads a PNG of the whole page.</p></li>
+            </ol>
+            <p><strong>Good for:</strong> a quick one-off capture on a computer where you can't or don't want to add an extension. Because the command renders the page at its full height rather than scrolling it, some layouts can look slightly different from what you see on screen, for example sections sized to the height of the window. The command also captures the page as a whole, so content hidden inside an inner scrolling panel stays hidden.</p>
+          </section>
+
+          <section id="pagestitch" aria-labelledby="pagestitch-heading">
+            <p class="eyebrow">Method 2 · Chrome extension</p>
+            <h2 id="pagestitch-heading">PageStitch: one click or one shortcut</h2>
+            <p>If you capture pages often, an extension saves the trip through DevTools. PageStitch scrolls the page the way you would, captures each screen, and stitches them into one PNG, all locally in Chrome.</p>
+            <ol class="guide-steps">
+              <li><span>01</span><p>Install PageStitch from the <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=how-to-screenshot-an-entire-webpage">Chrome Web Store</a> and pin it to the toolbar if you like.</p></li>
+              <li><span>02</span><p>Open an ordinary web page.</p></li>
+              <li><span>03</span><p>Click the PageStitch button, or press <strong>Alt+Shift+S</strong> (Option+Shift+S on macOS). The shortcut can be changed at <code>chrome://extensions/shortcuts</code>.</p></li>
+              <li><span>04</span><p>Keep the tab active while the toolbar badge shows progress.</p></li>
+              <li><span>05</span><p>Check the preview in the result tab, then choose <strong>Download PNG</strong> or <strong>Copy image</strong>. Single-image captures can be cropped first.</p></li>
+            </ol>
+            <p><strong>Good for:</strong> regular use, bug reports, and pages that scroll inside a panel. When the page fits the window but one scrollable area takes up at least half of it, PageStitch captures that area's full content. Downloads get readable filenames built from the site, page title, and time. Very large pages are split into lossless, numbered PNG parts instead of being scaled down. Nothing is uploaded: there is no account, analytics, or remote code.</p>
+            <figure class="guide-figure">
+              <img src="../screenshot-1.png" width="1280" height="800" alt="A stitched full-page capture shown in the PageStitch result tab, ready to download or copy">
+              <figcaption>A PageStitch capture in its local result tab.</figcaption>
+            </figure>
+          </section>
+
+          <section id="pdf" aria-labelledby="pdf-heading">
+            <p class="eyebrow">Method 3 · Also built in</p>
+            <h2 id="pdf-heading">Print to PDF</h2>
+            <p>Sometimes you don't need an image at all. Chrome's print dialog can save any printable page as a PDF:</p>
+            <ol class="guide-steps">
+              <li><span>01</span><p>Press <strong>Ctrl+P</strong> (<strong>Cmd+P</strong> on macOS).</p></li>
+              <li><span>02</span><p>Set the destination to <strong>Save as PDF</strong>. Under <strong>More settings</strong>, turn on <strong>Background graphics</strong> if colors and images are missing.</p></li>
+              <li><span>03</span><p>Select <strong>Save</strong>.</p></li>
+            </ol>
+            <p><strong>Good for:</strong> articles, documentation, and receipts where you want selectable text or a file that prints well. Keep in mind that it is not a picture of the screen. The layout may reflow for print, content is split across pages, and some sites hide menus or other elements in their print styles.</p>
+          </section>
+
+          <section id="tips" aria-labelledby="tips-heading">
+            <p class="eyebrow">When a page fights back</p>
+            <h2 id="tips-heading">Tips for tricky pages</h2>
+            <div class="answer-list">
+              <p><strong>Lazy-loaded images</strong><span>Many pages only load images as you scroll near them. If pictures come out blank, scroll to the bottom and back to the top once, then capture.</span></p>
+              <p><strong>Sticky headers and pop-ups</strong><span>Close cookie banners, chat bubbles, and sign-up pop-ups first so they don't cover content. Headers and bars that stay pinned while you scroll are a classic trouble spot for any capture method; if one looks out of place, try another of the methods above.</span></p>
+              <p><strong>Inner scrolling areas</strong><span>Web apps often scroll a panel instead of the page. PageStitch captures a single large scrollable area; complex nested scrollers may not stitch perfectly.</span></p>
+              <p><strong>Changing layouts</strong><span>Pages that animate, load forever, or change as they scroll may not stitch perfectly. Pause videos and wait for the page to settle.</span></p>
+              <p><strong>Protected pages</strong><span>PageStitch cannot capture Chrome settings, the Chrome Web Store, other extension pages, or non-HTTP(S) URLs.</span></p>
+            </div>
+          </section>
+
+          <section aria-labelledby="faq-heading">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-heading">Common questions</h2>
+            <div class="guide-faq">
+              <h3>Which method should I use?</h3>
+              <p>For an occasional capture, the DevTools command is right there and costs nothing. If you capture pages regularly or need to handle inner scrolling panels, an extension like PageStitch is quicker. If you want text you can select or print, save a PDF.</p>
+              <h3>Can I screenshot an entire webpage without an extension?</h3>
+              <p>Yes. Both the DevTools command and Print to PDF are part of Chrome.</p>
+              <h3>Does PageStitch send my screenshots anywhere?</h3>
+              <p>No. Capturing and stitching happen locally in Chrome. See the <a href="../privacy-policy.html">privacy policy</a> for details.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="related-heading">
+            <p class="eyebrow">Keep reading</p>
+            <h2 id="related-heading">Related guides</h2>
+            <ul class="related-links">
+              <li><a href="../full-page-screenshot-chrome/">Full-page screenshots in Chrome with PageStitch</a></li>
+              <li><a href="../scrolling-screenshot-chrome/">Scrolling screenshots in Chrome: how PageStitch scrolls and stitches</a></li>
+              <li><a href="../private-screenshot-extension/">A private screenshot extension for Chrome</a></li>
+              <li><a href="../gofullpage-alternative/">A GoFullPage alternative for Chrome</a></li>
+              <li><a href="../support.html">PageStitch support: capture guide and troubleshooting</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+
+      <section class="final-cta" aria-labelledby="cta-heading">
+        <div class="shell final-cta-grid">
+          <div>
+            <p class="eyebrow">Capture pages often?</p>
+            <h2 id="cta-heading">Make it one shortcut.</h2>
+          </div>
+          <div class="final-cta-action">
+            <p>PageStitch turns the whole page into one PNG with a click or Alt+Shift+S, privately on your device.</p>
+            <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=how-to-screenshot-an-entire-webpage">Add to Chrome <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <a class="wordmark footer-wordmark" href="../">Page<span class="wordmark-mark">Stitch</span></a>
+          <p>Full-page screenshots.<br>Made locally in Chrome.</p>
+        </div>
+        <div class="footer-column">
+          <strong>Product</strong>
+          <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=how-to-screenshot-an-entire-webpage">Chrome Web Store</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+        </div>
+        <div class="footer-column">
+          <strong>Trust</strong>
+          <a href="../privacy-policy.html">Privacy policy</a>
+          <a href="https://github.com/irkochos/pagestitch-privacy">Website on GitHub</a>
+        </div>
+        <div class="footer-column">
+          <strong>Guides</strong>
+          <a href="../full-page-screenshot-chrome/">Full-page screenshots</a>
+          <a href="../how-to-screenshot-an-entire-webpage/">Screenshot a whole webpage</a>
+          <a href="../private-screenshot-extension/">Private screenshots</a>
+          <a href="../scrolling-screenshot-chrome/">Scrolling screenshots</a>
+          <a href="../gofullpage-alternative/">GoFullPage alternative</a>
+        </div>
+      </div>
+      <div class="shell footer-base">
+        <span>© 2026 PageStitch</span>
+        <span>Chrome 116+ · PNG output</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PageStitch is a private screenshot extension for Chrome: captures are processed on your device, with no account, analytics, uploads, or remote code.">
+    <meta name="theme-color" content="#f4f5f2">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A private screenshot extension for Chrome">
+    <meta property="og:description" content="What PageStitch runs locally, the three permissions it asks for and why, and when local capture data is deleted.">
+    <meta property="og:url" content="https://getpagestitch.com/private-screenshot-extension/">
+    <meta property="og:image" content="https://getpagestitch.com/promo-marquee.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://getpagestitch.com/private-screenshot-extension/">
+    <link rel="icon" href="../promo-small.png" type="image/png">
+    <title>Private Screenshot Extension for Chrome — PageStitch</title>
+    <link rel="stylesheet" href="../site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="wordmark" href="../" aria-label="PageStitch home">
+          <span class="wordmark-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>Page<span class="wordmark-mark">Stitch</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="../">Home</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+          <a href="../privacy-policy.html">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=private-screenshot-extension">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-intro guide-intro">
+        <div class="shell page-intro-grid">
+          <div>
+            <p class="eyebrow">Privacy · Chrome</p>
+            <h1>A private screenshot extension for Chrome</h1>
+          </div>
+          <div>
+            <p class="lede">Screenshots capture whatever is on the page, and that is often private. PageStitch captures and stitches full pages locally in Chrome. Here is what it does with your data, using the wording of its privacy policy and Chrome Web Store listing.</p>
+            <div class="actions">
+              <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=private-screenshot-extension">Add PageStitch to Chrome <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="shell guide-layout">
+        <article class="article">
+          <section aria-labelledby="local-heading">
+            <p class="eyebrow">What runs where</p>
+            <h2 id="local-heading">Everything happens locally in Chrome</h2>
+            <p>Screenshots tend to include things you would rather keep to yourself: dashboards, invoices, internal tools, messages, medical or banking pages. A screenshot extension sees all of it, so it matters where the pixels go.</p>
+            <p>PageStitch captures a web page you select and converts it into a PNG image. All capture processing happens locally in Google Chrome on your device:</p>
+            <ul class="guide-list">
+              <li><strong>Capturing.</strong> PageStitch scrolls through the page and captures each view inside your browser.</li>
+              <li><strong>Stitching.</strong> The views are joined into a PNG (or numbered PNG parts for very large pages) on a canvas in a hidden extension page, not on a server.</li>
+              <li><strong>Previewing.</strong> The finished capture opens in a local result tab, where you choose whether to download it, copy it, or close it.</li>
+            </ul>
+            <p>PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no account system, analytics, advertising, tracking, cloud storage, or remote service. It packages all executable code in the extension and does not download or execute remote code. PageStitch does not sell or share user data.</p>
+          </section>
+
+          <section aria-labelledby="permissions-heading">
+            <p class="eyebrow">Permissions</p>
+            <h2 id="permissions-heading">Three permissions, and why each is needed</h2>
+            <p>Chrome shows every extension's permissions before you install it. PageStitch asks for three, and these are the reasons given on its Chrome Web Store listing:</p>
+            <div class="answer-list">
+              <p><strong><code>activeTab</code></strong><span>Provides temporary access to the tab only after you click the PageStitch toolbar button or press its keyboard shortcut. PageStitch uses that access to validate, measure, scroll, and capture the selected page.</span></p>
+              <p><strong><code>scripting</code></strong><span>Injects the packaged capture helper into the selected tab. The helper measures the page, controls scrolling during capture, and restores the original page state afterward.</span></p>
+              <p><strong><code>offscreen</code></strong><span>Creates a hidden extension document containing a local canvas that stitches captured viewport images into a PNG (or numbered PNG parts for very large pages).</span></p>
+            </div>
+            <p>PageStitch does not request the <code>clipboardWrite</code> permission. The local result page calls Chrome's Clipboard API only after you select <strong>Copy image</strong>, and Chrome or operating-system policy can still refuse the request. If that happens, use <strong>Download PNG</strong> instead.</p>
+            <p>PageStitch runs only after you click its toolbar button or press its keyboard shortcut, <strong>Alt+Shift+S</strong> by default (Option+Shift+S on macOS).</p>
+          </section>
+
+          <section aria-labelledby="storage-heading">
+            <p class="eyebrow">Storage and deletion</p>
+            <h2 id="storage-heading">What is stored on your device, and when it is deleted</h2>
+            <p>To capture a page, PageStitch temporarily handles the selected page's visual content, layout measurements, URL, and title. The URL is used to confirm that the page is supported and remains the active source during capture.</p>
+            <ul class="guide-list">
+              <li><strong>The finished capture.</strong> The completed PNG is temporarily stored in extension-owned IndexedDB so the local result page can display it. A single-image capture is deleted as soon as the result page has rendered it; if that render fails, the record is left in place for the 24-hour expiry described below. A capture split into several PNG parts is kept while its result tab is open, so every part stays reachable, and is deleted when you select <strong>Close</strong> or <strong>Capture another</strong>. Closing that result tab from the tab strip does not delete it; it expires like any other leftover record. If the result tab cannot be opened, the capture is deleted immediately. Records left by a closed result tab, a failed render, or a browser or extension crash are deleted once they are 24 hours old, when PageStitch next starts or saves a capture.</li>
+              <li><strong>The site name and page title.</strong> These are kept with the local capture only to name the downloaded file. The rest of the URL (path, query, and fragment) is not stored.</li>
+              <li><strong>A capture count.</strong> PageStitch keeps a small count of successful captures in extension-owned local storage to decide when to show one optional review-or-support message. The count never leaves your device and is deleted when PageStitch is removed.</li>
+            </ul>
+            <p>Once you download or copy a capture, the PNG is an ordinary file or clipboard image, and it goes wherever you put it. You can also choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
+            <p>The full wording is in the <a href="../privacy-policy.html">PageStitch privacy policy</a>.</p>
+          </section>
+
+          <section aria-labelledby="without-heading">
+            <p class="eyebrow">What you won't need</p>
+            <h2 id="without-heading">No account, no analytics, no uploads, no remote code</h2>
+            <div class="answer-list">
+              <p><strong>No account</strong><span>There is nothing to sign up for or sign in to. Install the extension and start a capture.</span></p>
+              <p><strong>No analytics</strong><span>PageStitch has no analytics, advertising, or tracking, and it does not transmit usage information.</span></p>
+              <p><strong>No uploads</strong><span>Page content and screenshots are not transmitted to the developer or any third party, and there is no cloud storage.</span></p>
+              <p><strong>No remote code</strong><span>All executable code is packaged in the extension. PageStitch does not download or execute remote code.</span></p>
+            </div>
+          </section>
+
+          <section aria-labelledby="features-heading">
+            <p class="eyebrow">Still a full-page tool</p>
+            <h2 id="features-heading">What you get from a capture</h2>
+            <p>PageStitch is still a full-page capture tool. It captures full-height pages, pages wider than the window, and large scrollable panels inside web apps. From the result tab you can <strong>Download PNG</strong> with a filename built from the site, the page title, and the local date and time, <strong>Copy image</strong>, or crop a single-image capture before you save it. Very large pages are split into lossless, numbered PNG parts instead of being scaled down. The interface is available in English, Spanish, French, Brazilian Portuguese, German, Arabic, and Japanese.</p>
+            <p>The <a href="../full-page-screenshot-chrome/">full-page screenshot guide</a> walks through a capture step by step.</p>
+          </section>
+
+          <section aria-labelledby="faq-heading">
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-heading">Privacy questions</h2>
+            <div class="guide-faq">
+              <h3>Can PageStitch see the other pages I have open?</h3>
+              <p>The <code>activeTab</code> permission gives PageStitch temporary access only to the page on which you start a capture, and only after you click the toolbar button or press the shortcut.</p>
+              <h3>Does PageStitch keep my screenshots?</h3>
+              <p>Only briefly, so the result tab can show them. A single-image capture is deleted from extension-owned storage as soon as the result page has rendered it. A capture split into several PNG parts is kept while its result tab is open and deleted when you select <strong>Close</strong> or <strong>Capture another</strong>. Leftover records, such as those from a result tab closed from the tab strip, a failed render, or a crash, are deleted once they are 24 hours old, when PageStitch next starts or saves a capture.</p>
+              <h3>Is the page's full address saved?</h3>
+              <p>No. Only the site name and page title are kept with the local capture, to name the downloaded file. The path, query, and fragment are not stored.</p>
+              <h3>Which pages can't it capture?</h3>
+              <p>Chrome system pages, the Chrome Web Store, other extension pages, and non-HTTP(S) URLs cannot be captured. The <a href="../support.html">support page</a> covers these limits and what to do about them.</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="related-heading">
+            <p class="eyebrow">Keep reading</p>
+            <h2 id="related-heading">Related guides</h2>
+            <ul class="related-links">
+              <li><a href="../full-page-screenshot-chrome/">Full-page screenshots in Chrome with PageStitch</a></li>
+              <li><a href="../scrolling-screenshot-chrome/">Scrolling screenshots in Chrome: how PageStitch scrolls and stitches</a></li>
+              <li><a href="../gofullpage-alternative/">A GoFullPage alternative for Chrome</a></li>
+              <li><a href="../support.html">PageStitch support: capture guide and troubleshooting</a></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+
+      <section class="final-cta" aria-labelledby="cta-heading">
+        <div class="shell final-cta-grid">
+          <div>
+            <p class="eyebrow">Private by default</p>
+            <h2 id="cta-heading">Keep your captures yours.</h2>
+          </div>
+          <div class="final-cta-action">
+            <p>Install PageStitch, open a page, and press Alt+Shift+S. The capture is processed on your device.</p>
+            <a class="button button-primary" href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=private-screenshot-extension">Add to Chrome <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <a class="wordmark footer-wordmark" href="../">Page<span class="wordmark-mark">Stitch</span></a>
+          <p>Full-page screenshots.<br>Made locally in Chrome.</p>
+        </div>
+        <div class="footer-column">
+          <strong>Product</strong>
+          <a href="https://chromewebstore.google.com/detail/pagestitch/gfjdgnkkoamcoalobkoepdjoiamkahhe?utm_source=getpagestitch.com&utm_medium=website&utm_campaign=private-screenshot-extension">Chrome Web Store</a>
+          <a href="../#workflow">How it works</a>
+          <a href="../support.html">Support</a>
+        </div>
+        <div class="footer-column">
+          <strong>Trust</strong>
+          <a href="../privacy-policy.html">Privacy policy</a>
+          <a href="https://github.com/irkochos/pagestitch-privacy">Website on GitHub</a>
+        </div>
+        <div class="footer-column">
+          <strong>Guides</strong>
+          <a href="../full-page-screenshot-chrome/">Full-page screenshots</a>
+          <a href="../how-to-screenshot-an-entire-webpage/">Screenshot a whole webpage</a>
+          <a href="../private-screenshot-extension/">Private screenshots</a>
+          <a href="../scrolling-screenshot-chrome/">Scrolling screenshots</a>
+          <a href="../gofullpage-alternative/">GoFullPage alternative</a>
+        </div>
+      </div>
+      <div class="shell footer-base">
+        <span>© 2026 PageStitch</span>
+        <span>Chrome 116+ · PNG output</span>
+      </div>
+    </footer>
+  </body>
+</html>
