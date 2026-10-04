@@ -84,9 +84,9 @@ const models = {
     "dpr-1-25": { geometry: { width: "2400px", height: "1800px" }, seam: ".8px", requiredScale: "1.25" },
     "dpr-1-5": { geometry: { width: "2400px", height: "1800px" }, seam: ".666667px", requiredScale: "1.5" },
     "dpr-2": { geometry: { width: "2400px", height: "1800px" }, seam: ".5px", requiredScale: "2" },
-    edge: { geometry: { width: "8192px", height: "2048px" }, seam: "1px", requiredScale: "1" },
-    area: { geometry: { width: "4096px", height: "4096px" }, seam: "1px", requiredScale: "1" },
-    multipart: { geometry: { width: "9000px", height: "5000px" }, seam: "1px", requiredScale: "1" }
+    edge: { geometry: { width: "32767px", height: "2048px" }, seam: "1px", requiredScale: "1" },
+    area: { geometry: { width: "8192px", height: "8192px" }, seam: "1px", requiredScale: "1" },
+    multipart: { geometry: { width: "33000px", height: "4000px" }, seam: "1px", requiredScale: "1" }
   }
 };
 

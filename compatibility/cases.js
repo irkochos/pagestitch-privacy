@@ -115,8 +115,8 @@ const definitions = [
     ["dpr-one-quarter", "Device scale 1.25 reference", "dpr-1-25"],
     ["dpr-one-half", "Device scale 1.5 reference", "dpr-1-5"],
     ["dpr-two", "Device scale two reference", "dpr-2"],
-    ["edge-8192", "8,192 pixel edge boundary", "edge"],
-    ["area-16777216", "16,777,216 pixel area boundary", "area"],
+    ["edge-32767", "32,767 pixel edge boundary", "edge"],
+    ["area-67108864", "67,108,864 pixel area boundary", "area"],
     ["multipart-cross", "Rows and columns cross part boundaries", "multipart"]
   ]]
 ];
