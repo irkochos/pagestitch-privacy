@@ -42,7 +42,7 @@
           </div>
           <div>
             <p class="lede">What PageStitch handles, why it handles it, and where it stays.</p>
-            <p class="policy-date">Effective August 11, 2026</p>
+            <p class="policy-date">Effective October 5, 2026</p>
           </div>
         </div>
       </header>
@@ -62,20 +62,22 @@
           <p class="policy-lead">PageStitch captures a web page selected by the user and converts it into a PNG image. All capture processing happens locally in Google Chrome on the user's device.</p>
 
           <h2>Data PageStitch handles</h2>
-          <p>When the user starts a capture, PageStitch temporarily handles the selected page's visual content, layout measurements, URL, and title. The URL is used to confirm that the page is supported and remains the active source during capture. The page's site name and page title are kept with the local capture only to name the downloaded file and to title a PDF you save (the PDF's document title); the rest of the URL (path, query, and fragment) is not stored.</p>
+          <p>When the user starts a capture, PageStitch temporarily handles the selected page's visual content, layout measurements, URL, title, and the addresses of the links on the page. The URL is used to confirm that the page is supported and remains the active source during capture. The page's site name and page title are kept with the local capture only to name the downloaded file and to title a PDF you save (the PDF's document title).</p>
+
+          <p>To make links in a saved PDF clickable, PageStitch reads the addresses of links on the captured page, which can include the page's own address (with its path, query, and fragment) when a link points back to the same page, such as a "back to top" link. These link addresses are kept with the capture on your device, are deleted with the capture, and are never transmitted. They are written into a file only when you save a PDF with <strong>Clickable links</strong> turned on.</p>
 
           <h2>Collection and sharing</h2>
-          <p>PageStitch does not transmit page content, screenshots, URLs, or usage information to the developer or any third party. It has no analytics, advertising, tracking, account system, or remote service. PageStitch does not sell or share user data.</p>
+          <p>PageStitch does not transmit page content, screenshots, URLs, link addresses, or usage information to the developer or any third party. It has no analytics, advertising, tracking, account system, or remote service. PageStitch does not sell or share user data.</p>
 
           <h2>Limited use</h2>
-          <p>PageStitch uses page content, screenshots, layout measurements, and the selected page URL and title only to provide its disclosed single purpose: creating the user-requested PNG capture. This use complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+          <p>PageStitch uses page content, screenshots, layout measurements, link addresses, and the selected page URL and title only to provide its disclosed single purpose: creating the user-requested capture, saved as PNG images or as a PDF. This use complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
 
           <h2>Local storage and deletion</h2>
           <p>The completed PNG is temporarily stored in extension-owned IndexedDB so the local result page can display it. A single-image capture is deleted as soon as the result page has rendered it; if that render fails, the record is left in place for the 24-hour expiry described below. A capture split into several PNG parts is kept while its result tab is open, so every part stays reachable, and is deleted when you select <strong>Close</strong> or <strong>Capture another</strong>. Closing that result tab from the tab strip does not delete it; it expires like any other leftover record. If the result tab cannot be opened, the capture is deleted immediately. Records left by a closed result tab, a failed render, or a browser or extension crash are deleted once they are 24 hours old, when PageStitch next starts or saves a capture.</p>
 
           <p>PageStitch keeps a small count of successful captures in extension-owned local storage to decide when to show one optional review-or-support message. The count never leaves your device and is deleted when PageStitch is removed.</p>
 
-          <p>The image editor remembers your last editor settings (color, sizes, fill, blur strength, emoji, and watermark text, position, and opacity) and your chosen PDF page size in the extension's local storage on this device so they are ready next time. They are never transmitted and are deleted when PageStitch is removed.</p>
+          <p>The image editor remembers your last editor settings (color, sizes, fill, blur strength, emoji, watermark text, position, and opacity, padding, and date format) and your PDF export settings (page size, clickable links, and page numbers) in the extension's local storage on this device so they are ready next time. They are never transmitted and are deleted when PageStitch is removed.</p>
 
           <h2>Permissions</h2>
           <ul>
