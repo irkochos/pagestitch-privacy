@@ -88,7 +88,9 @@
           <p>PageStitch does not request the <code>clipboardWrite</code> permission. The local result page calls the browser Clipboard API only after the user selects <strong>Copy image</strong>; Chrome or operating-system policy can still refuse the request.</p>
 
           <h2>User choices</h2>
-          <p>PageStitch runs only after the user clicks its toolbar button or presses its keyboard shortcut. Users can choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
+          <p>PageStitch runs only after the user clicks its toolbar button or presses its keyboard shortcut and chooses a capture mode.</p>
+          <p>The Select area and Element overlay runs only on the page the user chose and reads only the position, size, and tag name of the area or element under the pointer; it keeps nothing.</p>
+          <p>Users can choose not to copy or download a result, close the result page, disable the extension, or uninstall it through Chrome.</p>
 
           <h2>Remote code</h2>
           <p>PageStitch packages all executable code in the extension and does not download or execute remote code.</p>
